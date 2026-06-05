@@ -1,0 +1,9 @@
+#!/bin/sh
+# Daemonless standard healthcheck for radicale
+
+# Standard Mode: Check /ready or HTTP endpoint
+if fetch -o /dev/null "http://127.0.0.1:5232/" >/dev/null 2>&1; then
+    exit 0
+else
+    exit 1
+fi

@@ -1,0 +1,97 @@
+name: radicale
+
+x-daemonless:
+  title: "OpenCloud-Radicale"
+  icon: ":material-apps:"  # https://pictogrammers.com/library/mdi/ (material-) or https://simpleicons.org/ (simple-)
+  category: "Utilities"
+  description: "A simple CalDAV (calendar) and CardDAV (contact) server."
+  upstream_url: "https://github.com/daemonless/opencloud-radicale"
+  web_url: "https://radicale.org/"
+  user: "bsd"
+  mlock: false
+  community: "Discord:https://discord.gg/Kb9tkhecZT"
+  notes: |
+    # !!! WARNING "Work in Progress"
+    This image is functional but may change significantly in a future release.
+
+    ## Intended for use with OpenCloud stack
+    This image can be used with [OpenCloud](https://daemonless.io/images/opencloud) to provide personal address books
+    and calendars for each OpenCloud user.  
+    The image relies on OpenCloud acting as an authenticating reverse proxy for radicale. Using it as a standalone
+    radicale server is probably not a good idea.
+
+    ## Integrate with OpenCloud
+    To intergrate the radicale service with OpenCloud, you need to add a proxy configuration to OpenCloud.
+      Create the file `/path/to/container/opencloud/config/proxy.yaml` with this content (or add the content below
+    to your existing `proxy.yaml` configuration file):
+    ```yaml
+    additional_policies:
+      - name: default
+        routes:
+          - endpoint: /caldav/
+            backend: http://radicale:5232
+            remote_user_header: X-Remote-User
+            skip_x_access_token: true
+            additional_headers:
+              - X-Script-Name: /caldav
+          - endpoint: /.well-known/caldav
+            backend: http://radicale:5232
+            remote_user_header: X-Remote-User
+            skip_x_access_token: true
+            additional_headers:
+              - X-Script-Name: /caldav
+          - endpoint: /carddav/
+            backend: http://radicale:5232
+            remote_user_header: X-Remote-User
+            skip_x_access_token: true
+            additional_headers:
+              - X-Script-Name: /carddav
+          - endpoint: /.well-known/carddav
+            backend: http://radicale:5232
+            remote_user_header: X-Remote-User
+            skip_x_access_token: true
+            additional_headers:
+              - X-Script-Name: /carddav
+    ```
+    Add the `radicale` service to your existing compose file for the OpenCloud stack by merging this:
+    ```yaml
+    services:
+      opencloud:
+        depends_on:
+          - radicale
+      radicale:
+        image: ghcr.io/daemonless/opencloud-radicale:latest
+        environment:
+          - PUID=1000
+          - PGID=1000
+          - TZ=UTC
+        volumes:
+          - /path/to/containers/opencloud-radicale:/config
+        restart: unless-stopped
+    ```
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /config: "Configuration and data directory"
+    ports:
+      5232: "Web UI"
+
+services:
+  radicale:
+    image: ghcr.io/daemonless/opencloud-radicale:latest
+    container_name: opencloud-radicale
+    restart: unless-stopped
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/opencloud-radicale:/config
+
+    ports:
+      - 5232:5232

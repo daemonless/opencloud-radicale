@@ -1,0 +1,10 @@
+#!/bin/sh
+# Radicale s6 service
+
+echo "[INFO] Starting radicale..."
+
+HOME=/config
+
+# Standard start command for radicale
+exec /usr/local/bin/s6-notifyoncheck -c /healthz /usr/local/bin/s6-setuidgid bsd \
+     /app/bin/python /app/bin/radicale 2>&1
