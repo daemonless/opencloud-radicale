@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-14T13:35:03Z",
+  "generated": "2026-07-01T20:06:15Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.7.5",
       "arch": "amd64",
-      "generated": "2026-06-14T13:33:49Z",
+      "generated": "2026-07-01T20:04:56Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -134,6 +134,10 @@
             "version": "2.9.8.1"
           },
           {
+            "name": "expat",
+            "version": "2.8.1"
+          },
+          {
             "name": "gettext-runtime",
             "version": "1.0"
           },
@@ -163,7 +167,7 @@
           },
           {
             "name": "python312",
-            "version": "3.12.13_2"
+            "version": "3.12.13_3"
           },
           {
             "name": "readline",
@@ -193,7 +197,7 @@
           },
           {
             "name": "certifi",
-            "version": "2026.5.20"
+            "version": "2026.6.17"
           },
           {
             "name": "charset-normalizer",
@@ -254,7 +258,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 42,
+        "freebsd": 43,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -262,7 +266,7 @@
         "python": 16,
         "ruby": 0,
         "rust": 0,
-        "total": 58
+        "total": 59
       }
     }
   }
