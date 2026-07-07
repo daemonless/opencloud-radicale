@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-01T20:06:15Z",
+  "generated": "2026-07-07T10:28:34Z",
   "image": "radicale",
   "tags": {
     "latest": {
-      "app_version": "3.7.5",
+      "app_version": "3.7.6",
       "arch": "amd64",
-      "generated": "2026-07-01T20:04:56Z",
+      "generated": "2026-07-07T10:27:15Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -27,7 +27,7 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -95,7 +95,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -107,7 +107,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -115,7 +115,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-zlib",
@@ -189,7 +189,7 @@
         "python": [
           {
             "name": "Radicale",
-            "version": "3.7.5"
+            "version": "3.7.6"
           },
           {
             "name": "bcrypt",
@@ -201,7 +201,7 @@
           },
           {
             "name": "charset-normalizer",
-            "version": "3.4.7"
+            "version": "3.4.8"
           },
           {
             "name": "defusedxml",
