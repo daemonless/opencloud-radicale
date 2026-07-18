@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-07T10:28:34Z",
+  "generated": "2026-07-18T23:54:46Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.7.6",
       "arch": "amd64",
-      "generated": "2026-07-07T10:27:15Z",
+      "generated": "2026-07-18T23:53:28Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -70,6 +70,10 @@
             "version": "15.0"
           },
           {
+            "name": "FreeBSD-locales",
+            "version": "15.0"
+          },
+          {
             "name": "FreeBSD-mtree",
             "version": "15.0"
           },
@@ -127,7 +131,7 @@
           },
           {
             "name": "ca_root_nss",
-            "version": "3.124"
+            "version": "3.125"
           },
           {
             "name": "execline",
@@ -135,11 +139,11 @@
           },
           {
             "name": "expat",
-            "version": "2.8.1"
+            "version": "2.8.2"
           },
           {
             "name": "gettext-runtime",
-            "version": "1.0"
+            "version": "1.0_1"
           },
           {
             "name": "indexinfo",
@@ -147,11 +151,11 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "libffi",
-            "version": "3.5.1"
+            "version": "3.6.0"
           },
           {
             "name": "mpdecimal",
@@ -163,7 +167,7 @@
           },
           {
             "name": "pkg",
-            "version": "2.6.2_1"
+            "version": "2.7.5"
           },
           {
             "name": "python312",
@@ -201,7 +205,7 @@
           },
           {
             "name": "charset-normalizer",
-            "version": "3.4.8"
+            "version": "3.4.9"
           },
           {
             "name": "defusedxml",
@@ -258,7 +262,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 43,
+        "freebsd": 44,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -266,7 +270,7 @@
         "python": 16,
         "ruby": 0,
         "rust": 0,
-        "total": 59
+        "total": 60
       }
     }
   }
