@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-18T23:54:46Z",
+  "generated": "2026-07-19T21:35:36Z",
   "image": "radicale",
   "tags": {
     "latest": {
-      "app_version": "3.7.6",
+      "app_version": "3.7.7",
       "arch": "amd64",
-      "generated": "2026-07-18T23:53:28Z",
+      "generated": "2026-07-19T21:34:19Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -193,7 +193,7 @@
         "python": [
           {
             "name": "Radicale",
-            "version": "3.7.6"
+            "version": "3.7.7"
           },
           {
             "name": "bcrypt",
