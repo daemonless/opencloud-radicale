@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-19T21:35:36Z",
+  "generated": "2026-07-30T23:40:58Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.7.7",
       "arch": "amd64",
-      "generated": "2026-07-19T21:34:19Z",
+      "generated": "2026-07-30T23:39:37Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -201,7 +201,7 @@
           },
           {
             "name": "certifi",
-            "version": "2026.6.17"
+            "version": "2026.7.22"
           },
           {
             "name": "charset-normalizer",
@@ -225,7 +225,7 @@
           },
           {
             "name": "pika",
-            "version": "1.4.1"
+            "version": "1.4.2"
           },
           {
             "name": "pip",
@@ -237,7 +237,7 @@
           },
           {
             "name": "pytz",
-            "version": "2026.2"
+            "version": "2026.3.post1"
           },
           {
             "name": "requests",
