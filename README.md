@@ -18,13 +18,11 @@ A simple CalDAV (calendar) and CardDAV (contact) server.
 | **Website** | [https://radicale.org/](https://radicale.org/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -34,18 +32,69 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   opencloud-radicale:
-    image: ghcr.io/daemonless/opencloud-radicale:latest
+    image: "ghcr.io/daemonless/opencloud-radicale:latest"
     container_name: opencloud-radicale
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
     volumes:
       - "/path/to/containers/opencloud-radicale:/config"
     ports:
-      - 5232:5232
+      - "5232:5232"
     restart: unless-stopped
 ```
+
+### AppJail Director
+**.env**:
+
+```
+# .env
+
+DIRECTOR_PROJECT=opencloud-radicale
+PUID=1000
+PGID=1000
+TZ=UTC
+```
+
+**appjail-director.yml**:
+
+```yaml
+# appjail-director.yml
+
+options:
+  - virtualnet: ':<random> default'
+  - nat:
+services:
+  opencloud-radicale:
+    name: opencloud_radicale
+    options:
+      - container: 'boot args:--pull'
+      - expose: '5232:5232 proto:tcp' \
+    oci:
+      user: root
+      environment:
+        - PUID: !ENV '${PUID}'
+        - PGID: !ENV '${PGID}'
+        - TZ: !ENV '${TZ}'
+    volumes:
+      - opencloud-radicale: /config
+volumes:
+  opencloud-radicale:
+    device: '/path/to/containers/opencloud-radicale'
+```
+
+**Makejail**:
+
+```
+# Makejail
+
+ARG tag=latest
+
+OPTION overwrite=force
+OPTION from=ghcr.io/daemonless/opencloud-radicale:${tag}
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
 
@@ -59,13 +108,30 @@ podman run -d --name opencloud-radicale \
   ghcr.io/daemonless/opencloud-radicale:latest
 ```
 
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  -o expose="5232:5232 proto:tcp" \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  -o fstab="/path/to/containers/opencloud-radicale /config <pseudofs>" \
+  ghcr.io/daemonless/opencloud-radicale:latest opencloud-radicale
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
 ### Ansible
 
 ```yaml
 - name: Deploy opencloud-radicale
   containers.podman.podman_container:
     name: opencloud-radicale
-    image: ghcr.io/daemonless/opencloud-radicale:latest
+    image: "ghcr.io/daemonless/opencloud-radicale:latest"
     state: started
     restart_policy: always
     env:
@@ -77,6 +143,8 @@ podman run -d --name opencloud-radicale \
     volumes:
       - "/path/to/containers/opencloud-radicale:/config"
 ```
+
+Access at: `http://localhost:5232`
 
 ## Parameters
 
@@ -162,7 +230,7 @@ services:
 
 **Architectures:** amd64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.0
+**Base:** FreeBSD 15
 
 ---
 
