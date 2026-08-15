@@ -20,7 +20,7 @@ A simple CalDAV (calendar) and CardDAV (contact) server.
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `latest` | **Upstream Binary**. Built from official release. | Most users. Matches Linux Docker behavior. |
+| `latest` | **Upstream Binary**. Built from official release. | Most users — recommended. |
 
 ## Prerequisites
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
@@ -70,7 +70,7 @@ services:
     name: opencloud_radicale
     options:
       - container: 'boot args:--pull'
-      - expose: '5232:5232 proto:tcp' \
+      - expose: '5232:5232 proto:tcp'
     oci:
       user: root
       environment:

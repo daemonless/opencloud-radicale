@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-06T12:24:23Z",
+  "generated": "2026-08-15T08:15:05Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.7.8",
       "arch": "amd64",
-      "generated": "2026-08-06T12:22:47Z",
+      "generated": "2026-08-15T08:14:31Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -309,7 +309,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_3"
+            "version": "3.12.13_4"
           },
           {
             "licenses": [
@@ -356,7 +356,7 @@
           {
             "name": "charset-normalizer",
             "purl": "",
-            "version": "3.4.9"
+            "version": "3.5.0"
           },
           {
             "name": "defusedxml",
@@ -381,7 +381,7 @@
           {
             "name": "pika",
             "purl": "",
-            "version": "1.4.2"
+            "version": "1.4.4"
           },
           {
             "name": "pip",
