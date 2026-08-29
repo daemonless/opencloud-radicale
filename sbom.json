@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-15T08:15:05Z",
+  "generated": "2026-08-29T22:04:32Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.7.8",
       "arch": "amd64",
-      "generated": "2026-08-15T08:14:31Z",
+      "generated": "2026-08-29T22:03:46Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -147,7 +147,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-openssl-lib",
-            "version": "15.1"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -175,7 +175,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p2"
+            "version": "15.1p3"
           },
           {
             "licenses": [
@@ -238,7 +238,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.125"
+            "version": "3.127"
           },
           {
             "licenses": [
@@ -309,7 +309,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.13_4"
+            "version": "3.12.14"
           },
           {
             "licenses": [
@@ -356,7 +356,7 @@
           {
             "name": "charset-normalizer",
             "purl": "",
-            "version": "3.5.0"
+            "version": "3.5.1"
           },
           {
             "name": "defusedxml",
@@ -371,7 +371,7 @@
           {
             "name": "idna",
             "purl": "",
-            "version": "3.18"
+            "version": "3.19"
           },
           {
             "name": "libpass",
