@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-29T22:04:32Z",
+  "generated": "2026-09-03T12:07:14Z",
   "image": "radicale",
   "tags": {
     "latest": {
-      "app_version": "3.7.8",
+      "app_version": "3.8.0",
       "arch": "amd64",
-      "generated": "2026-08-29T22:03:46Z",
+      "generated": "2026-09-03T12:06:37Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -341,7 +341,7 @@
           {
             "name": "Radicale",
             "purl": "",
-            "version": "3.7.8"
+            "version": "3.8.0"
           },
           {
             "name": "bcrypt",
