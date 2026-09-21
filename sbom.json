@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-14T16:20:50Z",
+  "generated": "2026-09-21T22:29:54Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.8.0",
       "arch": "amd64",
-      "generated": "2026-09-14T16:20:16Z",
+      "generated": "2026-09-21T22:03:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -49,6 +49,13 @@
               "CDDL-1.0"
             ],
             "name": "FreeBSD-ctf-lib",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -174,6 +181,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -238,7 +252,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -371,7 +385,7 @@
           {
             "name": "idna",
             "purl": "",
-            "version": "3.19"
+            "version": "3.20"
           },
           {
             "name": "libpass",
@@ -411,7 +425,7 @@
           {
             "name": "urllib3",
             "purl": "",
-            "version": "2.7.0"
+            "version": "2.8.0"
           },
           {
             "name": "vobject",
@@ -425,7 +439,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 46,
+        "freebsd": 48,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -433,7 +447,7 @@
         "python": 16,
         "ruby": 0,
         "rust": 0,
-        "total": 62
+        "total": 64
       }
     }
   }
