@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-21T22:29:54Z",
+  "generated": "2026-09-25T07:03:21Z",
   "image": "radicale",
   "tags": {
     "latest": {
-      "app_version": "3.8.0",
+      "app_version": "3.8.1",
       "arch": "amd64",
-      "generated": "2026-09-21T22:03:52Z",
+      "generated": "2026-09-25T07:02:46Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -355,7 +355,7 @@
           {
             "name": "Radicale",
             "purl": "",
-            "version": "3.8.0"
+            "version": "3.8.1"
           },
           {
             "name": "bcrypt",
@@ -410,7 +410,7 @@
           {
             "name": "pytz",
             "purl": "",
-            "version": "2026.3.post1"
+            "version": "2026.4"
           },
           {
             "name": "requests",
