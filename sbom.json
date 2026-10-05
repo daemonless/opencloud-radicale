@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-25T07:03:21Z",
+  "generated": "2026-10-05T22:14:57Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.8.1",
       "arch": "amd64",
-      "generated": "2026-09-25T07:02:46Z",
+      "generated": "2026-10-05T22:14:21Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -370,7 +370,7 @@
           {
             "name": "charset-normalizer",
             "purl": "",
-            "version": "3.5.1"
+            "version": "3.5.2"
           },
           {
             "name": "defusedxml",
@@ -410,7 +410,7 @@
           {
             "name": "pytz",
             "purl": "",
-            "version": "2026.4"
+            "version": "2026.5"
           },
           {
             "name": "requests",
