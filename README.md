@@ -70,8 +70,8 @@ options:
   - virtualnet: ':<random> default'
   - nat:
 services:
-  opencloud-radicale:
-    name: opencloud_radicale
+  radicale:
+    name: radicale
     options:
       - container: 'args:--pull'
       - expose: '5232:5232 proto:tcp'
