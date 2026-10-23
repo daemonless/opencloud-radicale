@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-17T10:09:58Z",
+  "generated": "2026-10-23T08:49:40Z",
   "image": "radicale",
   "tags": {
     "latest": {
       "app_version": "3.8.3",
       "arch": "amd64",
-      "generated": "2026-10-17T10:09:11Z",
+      "generated": "2026-10-23T08:48:58Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -238,7 +238,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -252,7 +252,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -323,7 +323,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -365,7 +365,7 @@
           {
             "name": "certifi",
             "purl": "",
-            "version": "2026.7.22"
+            "version": "2026.10.19"
           },
           {
             "name": "charset-normalizer",
@@ -405,7 +405,7 @@
           {
             "name": "python-dateutil",
             "purl": "",
-            "version": "2.9.0.post0"
+            "version": "3.0.0"
           },
           {
             "name": "pytz",
@@ -421,6 +421,11 @@
             "name": "six",
             "purl": "",
             "version": "1.17.0"
+          },
+          {
+            "name": "tzdata",
+            "purl": "",
+            "version": "2026.5"
           },
           {
             "name": "urllib3",
@@ -444,10 +449,10 @@
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 16,
+        "python": 17,
         "ruby": 0,
         "rust": 0,
-        "total": 64
+        "total": 65
       }
     }
   }
